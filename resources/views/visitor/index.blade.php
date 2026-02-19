@@ -36,6 +36,9 @@
     {{-- include blog grid --}}
     @include('visitor.pages.blog_grid')
 
+    {{-- Tempat konten halaman akan muncul --}}
+    @yield('content')
+
     {{-- include footer --}}
     @include('visitor.components.footer')
 

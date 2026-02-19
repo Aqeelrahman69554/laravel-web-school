@@ -1,5 +1,5 @@
 <!-- Class Start -->
-<div class="container-fluid pt-5">
+<div class="container-fluid pt-5" id="class1">
     <div class="container">
         <div class="text-center pb-2">
             <p class="section-title px-5">
@@ -11,7 +11,7 @@
             @foreach ($class1 as $item)
                 <div class="col-lg-4 mb-5">
                     <div class="card border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="img/class-1.jpg" alt="" />
+                        <img class="card-img-top mb-2" src="{{ asset('images/class/' . $item->image) }}" alt="" />
                         <div class="card-body text-center">
                             <h4 class="card-title">{{ $item->title_2 }}</h4>
                             <p class="card-text">

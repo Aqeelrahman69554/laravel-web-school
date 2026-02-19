@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
             BlogDetailSeeder::class,
             BlogDetailSeeder_2::class,
             ContactSeeder::class,
+            FooterSeeder::class,
         ]);
     }
 }
