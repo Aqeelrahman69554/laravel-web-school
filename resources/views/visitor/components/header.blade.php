@@ -11,7 +11,7 @@
             <p class="text-white mb-4">
                 {{ $home->desc_title }}
             </p>
-            <a href="" class="btn btn-secondary mt-1 py-3 px-5">Learn More</a>
+            <a href="" class="btn btn-secondary mt-1 py-3 px-5">Pelajari Selengkapnya</a>
         </div>
         <div class="col-lg-6 text-center text-lg-right">
             <img class="img-fluid mt-5" style="width:600px; height:600px; padding:30px"

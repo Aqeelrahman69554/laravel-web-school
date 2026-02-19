@@ -5,23 +5,17 @@
     <meta content="Free HTML Templates" name="keywords" />
     <meta content="Free HTML Templates" name="description" />
 
-    <!-- Favicon -->
-    <link href="visitor/img/favicon.ico" rel="icon" />
+    <link href="{{ asset('visitor/img/favicon.ico') }}" rel="icon" />
 
-    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet" />
 
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
 
-    <!-- Flaticon Font -->
-    <link href="visitor/lib/flaticon/font/flaticon.css" rel="stylesheet" />
+    <link href="{{ asset('visitor/lib/flaticon/font/flaticon.css') }}" rel="stylesheet" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="visitor/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="visitor/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="{{ asset('visitor/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('visitor/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="visitor/css/style.css" rel="stylesheet" />
+    <link href="{{ asset('visitor/css/style.css') }}" rel="stylesheet" />
 </head>

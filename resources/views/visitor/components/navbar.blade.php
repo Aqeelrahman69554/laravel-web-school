@@ -10,8 +10,8 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav font-weight-bold mx-auto py-0">
-                <a href="index.html" class="nav-item nav-link active">Beranda</a>
-                <a href="about.html" class="nav-item nav-link">Tentang Kami</a>
+                <a href="{{ route('visitor.home') }}" class="nav-item nav-link active {{ request()->is('/') ? 'active' : '' }}">Beranda</a>
+                <a href="{{ route('visitor.about') }}" class="nav-item nav-link {{ request()->is('about') ? 'active' : '' }}">Tentang Kami</a>
                 <a href="class.html" class="nav-item nav-link">Fakultas Kami</a>
                 <a href="team.html" class="nav-item nav-link">Tenaga Pengajar</a>
                 <a href="gallery.html" class="nav-item nav-link">Foto</a>
