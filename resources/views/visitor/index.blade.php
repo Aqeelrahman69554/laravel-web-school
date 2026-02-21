@@ -1,49 +1,21 @@
-<!doctype html>
-<html lang="en">
+@extends('visitor.layouts.main')
 
-{{-- include head --}}
-@include('visitor.partials.head')
-
-<body>
-
-    {{-- include Navbar --}}
-    @include('visitor.components.navbar')
-
-
-    {{-- include header --}}
+@section('content')
+    {{-- INCLUDE HEADER --}}
     @include('visitor.components.header')
 
-    {{-- include about --}}
+    {{-- INCLUDE ABOUT --}}
     @include('visitor.pages.about')
-
-    {{-- include about2 --}}
-    @include('visitor.pages.about2')
-
-
-    {{-- include class1 --}}
+    {{-- INCLUDE CLASS1 --}}
     @include('visitor.pages.class1')
-
-    {{-- include class2 --}}
+    {{-- INCLUDE class2 --}}
     @include('visitor.pages.class2')
-
-    {{-- include teacher --}}
+    {{-- INCLUDE TEACHER --}}
     @include('visitor.pages.teacher')
-
-    {{-- include teacher2 --}}
+    {{-- INCLUDE TEACHER2 --}}
     @include('visitor.pages.teacher2')
-
-
-    {{-- include blog grid --}}
+    {{-- INCLUDE BLOGGRID --}}
     @include('visitor.pages.blog_grid')
+@endsection
 
-    {{-- Tempat konten halaman akan muncul --}}
-    @yield('content')
 
-    {{-- include footer --}}
-    @include('visitor.components.footer')
-
-    {{-- include script --}}
-    @include('visitor.partials.script')
-</body>
-
-</html>
