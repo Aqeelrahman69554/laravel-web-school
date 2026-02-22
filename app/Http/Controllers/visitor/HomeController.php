@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\visitor;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 use App\Models\Home;
 use App\Models\About;
 use App\Models\About2;
@@ -13,6 +13,7 @@ use App\Models\Teacher;
 use App\Models\Teacher2;
 use App\Models\BlogGrid;
 use App\Models\Footer;
+use App\Models\Contact;
 
 class HomeController extends Controller
 {
@@ -20,8 +21,8 @@ class HomeController extends Controller
         $home = Home::first();
         $about = About::first();
         $about2 = About2::all();
-        $class1 = Class1::all();
-        $classes = Class1::first();
+        $class1 = Class1::first();
+        $classes = Class1::all();
         $class2 = Class2::first();
         $classes2 = Class2::all();
         $teacher = Teacher::first();
@@ -29,7 +30,8 @@ class HomeController extends Controller
         $teacher2 = Teacher2::all();
         $bloggrid = BlogGrid::first();
         $bloggrids = BlogGrid::all();
+        $contact = Contact::first();
         $footer = Footer::first();
-        return view('visitor.index', compact('home', 'about', 'about2', 'class1', 'class2', 'classes2', 'teacher', 'teachers', 'classes', 'teacher2', 'bloggrid', 'bloggrids', 'footer'));
+        return view('visitor.index', compact('home', 'about', 'about2', 'class1', 'class2', 'classes2', 'teacher', 'teachers', 'classes', 'teacher2', 'bloggrid', 'bloggrids', 'footer', 'contact'));
     }
 }

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\visitor;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 use App\Models\Teacher2;
 
 class Teacher2Controller extends Controller

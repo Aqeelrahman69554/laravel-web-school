@@ -22,11 +22,11 @@
             </div>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
-            <h3 class="text-primary mb-4">Get In Touch</h3>
+            <h3 class="text-primary mb-4">Hubungi Kami</h3>
             <div class="d-flex">
                 <h4 class="fa fa-map-marker-alt text-primary"></h4>
                 <div class="pl-3">
-                    <h5 class="text-white">Address</h5>
+                    <h5 class="text-white">Alamat Pusat</h5>
                     <p>123 Street, New York, USA</p>
                 </div>
             </div>
@@ -40,13 +40,13 @@
             <div class="d-flex">
                 <h4 class="fa fa-phone-alt text-primary"></h4>
                 <div class="pl-3">
-                    <h5 class="text-white">Phone</h5>
+                    <h5 class="text-white">No. Telepon</h5>
                     <p>+012 345 67890</p>
                 </div>
             </div>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
-            <h3 class="text-primary mb-4">Quick Links</h3>
+            <h3 class="text-primary mb-4">Tautan Langsung</h3>
             <div class="d-flex flex-column justify-content-start">
                 <a class="text-white mb-2" href="#home"><i class="fa fa-angle-right mr-2"></i>Beranda</a>
                 <a class="text-white mb-2" href="#about1"><i class="fa fa-angle-right mr-2"></i>Tentang Kami</a>
@@ -57,19 +57,19 @@
             </div>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
-            <h3 class="text-primary mb-4">Newsletter</h3>
+            <h3 class="text-primary mb-4">Langganan Informasi</h3>
             <form action="">
                 <div class="form-group">
-                    <input type="text" class="form-control border-0 py-4" placeholder="Your Name"
+                    <input type="text" class="form-control border-0 py-4" placeholder="Nama Lengkap"
                         required="required" />
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control border-0 py-4" placeholder="Your Email"
+                    <input type="email" class="form-control border-0 py-4" placeholder="Email"
                         required="required" />
                 </div>
                 <div>
                     <button class="btn btn-primary btn-block border-0 py-3" type="submit">
-                        Submit Now
+                        Kirim Sekarang
                     </button>
                 </div>
             </form>

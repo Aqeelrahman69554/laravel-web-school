@@ -15,7 +15,7 @@ class TeacherSeeder extends Seeder
     {
         $teachers = [
             [
-                'title_1' => 'Rektorat',
+                'title_1' => 'Tenaga Pendidik',
                 'image' => 'rektor-uin.jpg',
                 'twiter' => 'https://twitter.com/uinsk',
                 'linkedin' => 'https://linkedin.com/school/uin-sunan-kalijaga',

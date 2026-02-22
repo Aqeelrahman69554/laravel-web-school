@@ -16,6 +16,6 @@ class ContactController extends Controller
         $contact = Contact::first();
         // $footer = Footer::first();
         // $home = Home::first();
-        return view('visitor.pages.contact', compact('contact'));
+        return view('visitor.pages.bos.contact_page', compact('contact'));
     }
 }

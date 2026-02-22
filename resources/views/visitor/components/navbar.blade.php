@@ -12,8 +12,8 @@
             <div class="navbar-nav font-weight-bold mx-auto py-0">
                 <a href="{{ route('visitor.home') }}" class="nav-item nav-link active {{ request()->is('/') ? 'active' : '' }}">Beranda</a>
                 <a href="{{ route('visitor.about') }}" class="nav-item nav-link {{ request()->is('about') ? 'active' : '' }}">Tentang Kami</a>
-                <a href="class.html" class="nav-item nav-link">Fakultas Kami</a>
-                <a href="team.html" class="nav-item nav-link">Tenaga Pengajar</a>
+                <a href="{{ route('visitor.class1') }}" class="nav-item nav-link {{ request()->is('class1') ? 'active' : '' }}">Fakultas Kami</a>
+                <a href="{{ route('visitor.teacher') }}" class="nav-item nav-link {{ request()->is('teacher') ? 'active' : '' }}">Tenaga Pengajar</a>
                 <a href="gallery.html" class="nav-item nav-link">Foto</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Halaman</a>

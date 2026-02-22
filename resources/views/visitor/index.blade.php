@@ -16,6 +16,8 @@
     @include('visitor.pages.teacher2')
     {{-- INCLUDE BLOGGRID --}}
     @include('visitor.pages.blog_grid')
+    {{-- INCLUDE CONTACT --}}
+    @include('visitor.pages.contact')
 @endsection
 
 

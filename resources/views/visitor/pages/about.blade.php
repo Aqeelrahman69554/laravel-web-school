@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-lg-7">
                     <p class="section-title pr-5">
-                        <span class="pr-2">Learn About Us</span>
+                        <span class="pr-2">Mengenal Profil Kami</span>
                     </p>
                     <h1 class="mb-4">{{ $about->title }}</h1>
                     <p>
@@ -34,7 +34,7 @@
                             </ul>
                         </div>
                     </div>
-                    <a href="" class="btn btn-primary mt-2 py-2 px-4">Learn More</a>
+                    <a href="" class="btn btn-primary mt-2 py-2 px-4">Pelajari Selengkapnya</a>
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-12 mb-5 mb-lg-0">
                             <p class="section-title pr-5">
-                                <span class="pr-2">Book A Seat</span>
+                                <span class="pr-2">Registrasi Jalur Masuk</span>
                             </p>
                             <h1 class="mb-4">{{ $class2->title_1 }}</h1>
 
@@ -23,7 +23,7 @@
                                 @endforeach
                             </ul>
 
-                            <a href="" class="btn btn-primary mt-4 py-2 px-4">Book Now</a>
+                            <a href="" class="btn btn-primary mt-4 py-2 px-4">Klik Untuk Daftar</a>
                         </div>
                     </div>
                 </div>
