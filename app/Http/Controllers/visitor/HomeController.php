@@ -12,6 +12,8 @@ use App\Models\Class2;
 use App\Models\Teacher;
 use App\Models\Teacher2;
 use App\Models\BlogGrid;
+use App\Models\BlogDetail;
+use App\Models\BlogDetail2;
 use App\Models\Footer;
 use App\Models\Contact;
 
@@ -30,8 +32,10 @@ class HomeController extends Controller
         $teacher2 = Teacher2::all();
         $bloggrid = BlogGrid::first();
         $bloggrids = BlogGrid::all();
+        $blogdetail = BlogDetail::first();
+        $blogdetail2 = BlogDetail2::first();
         $contact = Contact::first();
         $footer = Footer::first();
-        return view('visitor.index', compact('home', 'about', 'about2', 'class1', 'class2', 'classes2', 'teacher', 'teachers', 'classes', 'teacher2', 'bloggrid', 'bloggrids', 'footer', 'contact'));
+        return view('visitor.index', compact('home', 'about', 'about2', 'class1', 'class2', 'classes2', 'teacher', 'teachers', 'classes', 'teacher2', 'bloggrid', 'bloggrids', 'blogdetail','blogdetail2', 'footer', 'contact'));
     }
 }

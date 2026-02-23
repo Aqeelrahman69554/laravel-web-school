@@ -10,6 +10,10 @@ use App\Http\Controllers\visitor\TeacherController;
 use App\Http\Controllers\visitor\Teacher2Controller;
 use App\Http\Controllers\visitor\FooterController;
 use App\Http\Controllers\visitor\ContactController;
+use App\Http\Controllers\visitor\BlogGridController;
+use App\Http\Controllers\visitor\BlogDetailController;
+use App\Http\Controllers\visitor\BlogDetail2Controller;
+// use App\Models\BlogGridDetail1;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -40,7 +44,15 @@ Route::name('visitor.')->group(function (){
     
     //CONTACT
     Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+
+    //BLOG GRID
+    Route::get('/blog_grid', [BlogGridController::class, 'index'])->name('blog_grid');
     
+    //BLOG DETAIL
+    Route::get('/blog_detail', [BlogDetailController::class, 'index'])->name('blog_detail');
+    
+    //BLOG DETAIL2
+    Route::get('/blog_detail2', [BlogDetail2Controller::class, 'index'])->name('blog_detail2');
     //FOOTER
     Route::get('/footer', [FooterController::class, 'index'])->name('footer');
 });

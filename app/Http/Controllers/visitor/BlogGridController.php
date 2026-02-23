@@ -11,6 +11,6 @@ class BlogGridController extends Controller
     public function index(){
     $bloggrid = BlogGrid::first();
     $bloggrids = BlogGrid::all();
-    return view('visitor.pages.blog_grid', compact('bloggrid', 'bloggrids'));
+    return view('visitor.pages.bos.blogGrid_page', compact('bloggrid', 'bloggrids'));
     }
 }
