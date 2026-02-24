@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             HomeSeeder::class,
             AboutSeeder::class,
             About2Seeder::class,
+            About3Seeder::class,
             Class1Seeder::class,
             Class2Seeder::class,
             GallerySeeder::class,

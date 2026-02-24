@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Home;
 use App\Models\About;
 use App\Models\About2;
+use App\Models\About3;
 use App\Models\Class1;
 use App\Models\Class2;
 use App\Models\Teacher;
@@ -23,6 +24,7 @@ class HomeController extends Controller
         $home = Home::first();
         $about = About::first();
         $about2 = About2::all();
+        $about3 = About3::first();
         $class1 = Class1::first();
         $classes = Class1::all();
         $class2 = Class2::first();
@@ -36,6 +38,6 @@ class HomeController extends Controller
         $blogdetail2 = BlogDetail2::first();
         $contact = Contact::first();
         $footer = Footer::first();
-        return view('visitor.index', compact('home', 'about', 'about2', 'class1', 'class2', 'classes2', 'teacher', 'teachers', 'classes', 'teacher2', 'bloggrid', 'bloggrids', 'blogdetail','blogdetail2', 'footer', 'contact'));
+        return view('visitor.index', compact('home', 'about', 'about2', 'about3', 'class1', 'class2', 'classes2', 'teacher', 'teachers', 'classes', 'teacher2', 'bloggrid', 'bloggrids', 'blogdetail','blogdetail2', 'footer', 'contact'));
     }
 }

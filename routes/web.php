@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\visitor\HomeController;
 use App\Http\Controllers\visitor\AboutController;
 use App\Http\Controllers\visitor\About2Controller;
+use App\Http\Controllers\visitor\About3Controller;
 use App\Http\Controllers\visitor\Class1Controller;
 use App\Http\Controllers\visitor\Class2Controller;
 use App\Http\Controllers\visitor\TeacherController;
@@ -29,7 +30,10 @@ Route::name('visitor.')->group(function (){
 
     // ABOUT2
     Route::get('/about2', [About2Controller::class, 'index'])->name('about2');
-
+    
+    //BLOG ABOUT3
+    Route::get('/about3', [About3Controller::class, 'index'])->name('about3');
+    
     //CLASS1
     Route::get('/class1', [Class1Controller::class, 'index'])->name('class1');
 
@@ -53,6 +57,9 @@ Route::name('visitor.')->group(function (){
     
     //BLOG DETAIL2
     Route::get('/blog_detail2', [BlogDetail2Controller::class, 'index'])->name('blog_detail2');
+    
+    
+    
     //FOOTER
     Route::get('/footer', [FooterController::class, 'index'])->name('footer');
 });
