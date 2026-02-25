@@ -25,7 +25,7 @@
                             <p>
                                 {{ $item->desc_subtitle }}
                             </p>
-                            <a href="" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
+                            <a href="{{ route('visitor.blog_detail') }}" class="btn btn-primary px-4 mx-auto my-2">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>

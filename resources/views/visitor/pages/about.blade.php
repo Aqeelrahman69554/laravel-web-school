@@ -34,7 +34,7 @@
                             </ul>
                         </div>
                     </div>
-                    <a href="{{ route('visitor.about') }}" class="btn btn-primary mt-2 py-2 px-4">Pelajari Selengkapnya</a>
+                    <a href="{{ route('visitor.about3') }}" class="btn btn-primary mt-2 py-2 px-4">Pelajari Selengkapnya</a>
                 </div>
             </div>
         </div>

@@ -4,9 +4,7 @@
         <img src="{{ asset('images/blog_detail/rektor-uin-suka.jpg') }}" class="img-fluid rounded-circle mx-auto mb-3" style="width: 100px" />
         <h3 class="text-secondary mb-3">{{$blogdetail2->name}}</h3>
         <p class="text-white m-0">
-            Conset elitr erat vero dolor ipsum et diam, eos
-            dolor lorem ipsum, ipsum ipsum sit no ut est. Guber
-            ea ipsum erat kasd amet est elitr ea sit.
+            "Mendedikasikan diri pada pengembangan paradigma Integrasi-Interkoneksi, menjembatani khazanah teks suci dengan ketajaman sains demi mewujudkan peradaban Islam yang moderat dan mendunia."
         </p>
     </div>
 
