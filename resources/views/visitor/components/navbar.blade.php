@@ -14,14 +14,15 @@
                 <a href="{{ route('visitor.about3') }}" class="nav-item nav-link {{ request()->is('about') ? 'active' : '' }}">Tentang Kami</a>
                 <a href="{{ route('visitor.class1') }}" class="nav-item nav-link {{ request()->is('class1') ? 'active' : '' }}">Fakultas Kami</a>
                 <a href="{{ route('visitor.teacher') }}" class="nav-item nav-link {{ request()->is('teacher') ? 'active' : '' }}">Tenaga Pengajar</a>
-                <a href="gallery.html" class="nav-item nav-link">Foto</a>
-                <div class="nav-item dropdown">
+                <a href="{{ route('visitor.gallery') }}" class="nav-item nav-link">Foto</a>
+                <a href="{{ route('visitor.blog_grid') }}" class="nav-item nav-link">Halaman</a>
+                {{-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Halaman</a>
                     <div class="dropdown-menu rounded-0 m-0">
                         <a href="{{ route('visitor.blog_grid') }}" class="dropdown-item">Blog Grid</a>
                         <a href="{{ route('visitor.blog_detail') }}" class="dropdown-item">Blog Detail</a>
                     </div>
-                </div>
+                </div> --}}
                 <a href="{{ route('visitor.contact') }}" class="nav-item nav-link">Kontak</a>
             </div>
             {{-- <a href="" class="btn btn-primary px-4">Join Class</a> --}}

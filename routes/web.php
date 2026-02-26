@@ -14,6 +14,7 @@ use App\Http\Controllers\visitor\ContactController;
 use App\Http\Controllers\visitor\BlogGridController;
 use App\Http\Controllers\visitor\BlogDetailController;
 use App\Http\Controllers\visitor\BlogDetail2Controller;
+use App\Http\Controllers\visitor\GalleryController;
 // use App\Models\BlogGridDetail1;
 
 // Route::get('/', function () {
@@ -58,7 +59,8 @@ Route::name('visitor.')->group(function (){
     //BLOG DETAIL2
     Route::get('/blog_detail2', [BlogDetail2Controller::class, 'index'])->name('blog_detail2');
     
-    
+    //GALLERY
+    Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
     
     //FOOTER
     Route::get('/footer', [FooterController::class, 'index'])->name('footer');
