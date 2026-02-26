@@ -4,21 +4,26 @@
         <div class="col-lg-3 col-md-6 mb-5">
             <a href="" class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
                 style="font-size: 40px; line-height: 40px">
-                <i class="flaticon-043-teddy-bear"></i>
-                <span class="text-white" style="font-size: 20px">{{$footer->title}}</span>
+                {{-- <i class="flaticon-043-teddy-bear"></i> --}}
+                <img style="width:60px; height:60px; padding:5px;" src="{{ asset('uin.ico') }}" alt="" />
+                <span class="text-white" style="font-size: 20px">{{ $footer->title }}</span>
             </a>
             <p>
                 {{ $footer->desc_title }}
             </p>
             <div class="d-flex justify-content-start mt-4">
-                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px"
-                    href="https://x.com/UINSK" target="_blank"><i class="fab fa-twitter"></i></a>
                 <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
-                    style="width: 38px; height: 38px" href="https://www.facebook.com/UINSK/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    style="width: 38px; height: 38px" href="https://x.com/UINSK" target="_blank"><i
+                        class="fab fa-twitter"></i></a>
                 <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
-                    style="width: 38px; height: 38px" href="https://www.linkedin.com/school/uin-sunan-kalijaga/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    style="width: 38px; height: 38px" href="https://www.facebook.com/UINSK/" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
                 <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
-                    style="width: 38px; height: 38px" href="https://www.instagram.com/uinsk/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    style="width: 38px; height: 38px" href="https://www.linkedin.com/school/uin-sunan-kalijaga/"
+                    target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                    style="width: 38px; height: 38px" href="https://www.instagram.com/uinsk/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
             </div>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
@@ -53,7 +58,8 @@
                 <a class="text-white mb-2" href="#class1"><i class="fa fa-angle-right mr-2"></i>Fakultas Kita</a>
                 <a class="text-white mb-2" href="#pengajar"><i class="fa fa-angle-right mr-2"></i>Tenaga Pengajar</a>
                 <a class="text-white mb-2" href="#berita"><i class="fa fa-angle-right mr-2"></i>Berita</a>
-                <a class="text-white" href="{{ route('visitor.contact') }}"><i class="fa fa-angle-right mr-2"></i>Kontak Kami</a>
+                <a class="text-white" href="{{ route('visitor.contact') }}"><i class="fa fa-angle-right mr-2"></i>Kontak
+                    Kami</a>
             </div>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
@@ -64,8 +70,7 @@
                         required="required" />
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control border-0 py-4" placeholder="Email"
-                        required="required" />
+                    <input type="email" class="form-control border-0 py-4" placeholder="Email" required="required" />
                 </div>
                 <div>
                     <button class="btn btn-primary btn-block border-0 py-3" type="submit">
