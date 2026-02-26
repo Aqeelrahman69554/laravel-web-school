@@ -24,25 +24,25 @@
                                 <div class="col-6 py-1 text-right border-right">
                                     <strong>Masa Studi</strong>
                                 </div>
-                                <div class="col-6 py-1">3 - 6 Years</div>
+                                <div class="col-6 py-1">{{ $item->age }}</div>
                             </div>
                             <div class="row border-bottom">
                                 <div class="col-6 py-1 text-right border-right">
                                     <strong>Kuota Pendaftar</strong>
                                 </div>
-                                <div class="col-6 py-1">40 Seats</div>
+                                <div class="col-6 py-1">{{ $item->seats }}</div>
                             </div>
                             <div class="row border-bottom">
                                 <div class="col-6 py-1 text-right border-right">
                                     <strong>Waktu Kuliah</strong>
                                 </div>
-                                <div class="col-6 py-1">08:00 - 10:00</div>
+                                <div class="col-6 py-1">{{ $item->time }}</div>
                             </div>
                             <div class="row">
                                 <div class="col-6 py-1 text-right border-right">
                                     <strong>Biaya Kuliah</strong>
                                 </div>
-                                <div class="col-6 py-1">$290 / Month</div>
+                                <div class="col-6 py-1">{{ $item->fee }}</div>
                             </div>
                         </div>
                         <a href="" class="btn btn-primary px-4 mx-auto mb-4">Daftar Sekarang</a>
