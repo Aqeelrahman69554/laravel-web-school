@@ -9,12 +9,12 @@
         </div>
         <div class="row">
             @foreach ($classes as $item)
-            
+
                 <div class="col-lg-4 mb-5">
                     <div class="card border-0 bg-light shadow-sm pb-2">
                         <img class="card-img-top mb-2" src="{{ asset('images/class/' . $item->image) }}" alt="" />
                         <div class="card-body text-center">
-                            <h4 class="card-title">{{ $item->title_2 }}</h4>
+                            <h4 class="card-title" style="font-family: 'Times New Roman', Times, serif">{{ $item->title_2 }}</h4>
                             <p class="card-text">
                                 {{ $item->desc_title_2 }}
                             </p>

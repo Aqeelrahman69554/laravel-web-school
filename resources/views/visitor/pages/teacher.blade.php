@@ -23,7 +23,7 @@
                                 href="#"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
-                    <h4>{{ $item->name }}</h4>
+                    <h4 style="font-family: 'Times New Roman', Times, serif">{{ $item->name }}</h4>
                     <i>{{ $item->status }}</i>
                 </div>
             @endforeach
