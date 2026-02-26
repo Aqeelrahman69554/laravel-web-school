@@ -5,7 +5,7 @@
     <meta content="Free HTML Templates" name="keywords" />
     <meta content="Free HTML Templates" name="description" />
 
-    <link href="{{ asset('visitor/img/favicon.ico') }}" rel="icon" />
+    <link href="{{ asset('uin.ico') }}" rel="icon" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet" />
