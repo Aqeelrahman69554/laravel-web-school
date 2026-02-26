@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-lg-7">
                     <p class="section-title pr-5">
-                        <span class="pr-2">Tentang Kami</span>
+                        <span class="pr-2">Tentang Kami 2</span>
                     </p>
                     <h1 class="mb-4">{{ $about->title }}</h1>
                     <p>
