@@ -45,7 +45,7 @@
                                 <div class="col-6 py-1">{{ $item->fee }}</div>
                             </div>
                         </div>
-                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Daftar Sekarang</a>
+                        {{-- <a href="" class="btn btn-primary px-4 mx-auto mb-4">Daftar Sekarang</a> --}}
                     </div>
                 </div>
             @endforeach

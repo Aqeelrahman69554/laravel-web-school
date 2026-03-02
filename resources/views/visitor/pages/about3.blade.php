@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- About Start -->
-    <div class="container-fluid py-5" id="about1">
+    <div class="container py-5 px-0" id="about1">
         <div class="">
             <div class="row align-items-center">
                 <div class="col-lg-5 pl-5">
@@ -41,11 +41,11 @@
                             </ul>
                         </div> --}}
                     
-                    <a href="{{ route('visitor.home') }}" class="btn btn-primary mt-2 py-2 px-4">Kembali</a>
+                    <a href="{{ route('visitor.about3') }}" class="btn btn-primary mt-2 py-2 px-4">Kembali</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- About End -->
-    {{-- @include('visitor.pages.about2') --}}
+    @include('visitor.pages.about2')
 @endsection

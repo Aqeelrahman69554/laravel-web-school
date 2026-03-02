@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder
             BlogDetailSeeder_2::class,
             ContactSeeder::class,
             FooterSeeder::class,
+            AuthSeeder::class,
         ]);
     }
 }

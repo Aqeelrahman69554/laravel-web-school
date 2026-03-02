@@ -2,6 +2,8 @@
 
 // VISITOR
 use Illuminate\Support\Facades\Route;
+
+//VISITOR
 use App\Http\Controllers\visitor\HomeController;
 use App\Http\Controllers\visitor\AboutController;
 use App\Http\Controllers\visitor\About2Controller;
@@ -16,6 +18,11 @@ use App\Http\Controllers\visitor\BlogGridController;
 use App\Http\Controllers\visitor\BlogDetailController;
 use App\Http\Controllers\visitor\BlogDetail2Controller;
 use App\Http\Controllers\visitor\GalleryController;
+
+use App\Http\Controllers\auth\AuthController;
+use App\Http\Controllers\auth\DashboardController;
+
+// use App\Models\BlogGridDetail1;
 
 // ADMIN
 use App\Http\Controllers\admin\HomeController as AdminHomeController;
@@ -80,49 +87,9 @@ Route::name('visitor.')->group(function () {
     Route::get('/footer', [FooterController::class, 'index'])->name('footer');
 });
 
+Route::get('/login', fn() => view('auth.login'))->name('login');
+Route::post('/auth', [AuthController::class, 'login']);
+Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/dash_about', fn() => view('admin.pages.dash_about'))->name('dash_about');
 
-// ADMIN
-Route::name('admin.')->group(function () {
-
-    // HOME
-    Route::get('/', [AdminHomeController::class, 'index'])->name('home');
-
-    // ABOUT
-    Route::get('/about', [AdminAboutController::class, 'index'])->name('about');
-
-    // ABOUT2
-    Route::get('/about2', [AdminAbout2Controller::class, 'index'])->name('about2');
-
-    //BLOG ABOUT3
-    Route::get('/about3', [AdminAbout3Controller::class, 'index'])->name('about3');
-
-    //CLASS1
-    Route::get('/class1', [AdminClass1Controller::class, 'index'])->name('class1');
-
-    //CLASS2
-    Route::get('/class2', [AdminClass2Controller::class, 'index'])->name('class2');
-
-    //TEACHER
-    Route::get('/teacher', [AdminTeacherController::class, 'index'])->name('teacher');
-
-    //TEACHER2
-    Route::get('/teacher2', [AdminTeacher2Controller::class, 'index'])->name('teacher2');
-
-    //CONTACT
-    Route::get('/contact', [AdminContactController::class, 'index'])->name('contact');
-
-    //BLOG GRID
-    Route::get('/blog_grid', [AdminBlogGridController::class, 'index'])->name('blog_grid');
-
-    //BLOG DETAIL
-    Route::get('/blog_detail', [AdminBlogDetailController::class, 'index'])->name('blog_detail');
-
-    //BLOG DETAIL2
-    Route::get('/blog_detail2', [AdminBlogDetail2Controller::class, 'index'])->name('blog_detail2');
-
-    //GALLERY
-    Route::get('/gallery', [AdminGalleryController::class, 'index'])->name('gallery');
-
-    //FOOTER
-    Route::get('/footer', [AdminFooterController::class, 'index'])->name('footer');
-});
+Route::post('/login', [AuthController::class, 'login'])->name('login');

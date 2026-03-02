@@ -5,6 +5,7 @@ namespace App\Http\Controllers\visitor;
 use App\Http\Controllers\Controller;
 use App\Models\About3;
 use App\Models\About;
+use App\Models\About2;
 // use Illuminate\Http\Request;
 
 class About3Controller extends Controller
@@ -13,8 +14,10 @@ class About3Controller extends Controller
     {
         $about3 = About3::first();
         $about = About::first();
+        $about2 = About2::all();
 
 
-        return view('visitor.pages.about3', compact('about3', 'about'));
+
+        return view('visitor.pages.about3', compact('about3', 'about', 'about2'));
     }
 }
