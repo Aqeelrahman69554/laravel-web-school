@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 
+
 class AuthController extends Controller
 {
     public function login(Request $request)
@@ -17,8 +18,23 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt($request->only('email', 'password'), $request->remember)) {
-            return redirect('/dashboard');
+            return redirect()->route('admin.dashboard');
         }
         return back()->with('failed', 'username atau password salah');
+    }
+
+    public function showLogin()
+    {
+        if (Auth::check()) {
+            return redirect()->route('admin.dashboard');
+        }
+
+        return view('auth.login');
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('auth.login');
     }
 }

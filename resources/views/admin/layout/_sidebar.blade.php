@@ -1,103 +1,167 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-        <img src="{{ asset('adminlte/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo"
-            class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">AdminLTE 3</span>
+    <!-- Logo -->
+    <a href="{{ route('admin.dashboard') }}" class="brand-link">
+        <img src="{{ asset('adminlte/dist/img/AdminLTELogo.png') }}" class="brand-image img-circle elevation-3">
+        <span class="brand-text font-weight-light">Admin Panel</span>
     </a>
 
-    <!-- Sidebar -->
     <div class="sidebar">
-        <!-- Sidebar user panel (optional) -->
+
+        <!-- User Info -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="{{ asset('adminlte/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2"
-                    alt="User Image">
+                <img src="{{ asset('adminlte/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="#" class="d-block">{{ auth()->user()->name }}</a>
             </div>
         </div>
 
-        <!-- SidebarSearch Form -->
-        <div class="form-inline">
-            <div class="input-group" data-widget="sidebar-search">
-                <input class="form-control form-control-sidebar" type="search" placeholder="Search"
-                    aria-label="Search">
-                <div class="input-group-append">
-                    <button class="btn btn-sidebar">
-                        <i class="fas fa-search fa-fw"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sidebar Menu -->
+        <!-- Menu -->
         <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-                data-accordion="false">
-                <!-- Add icons to the links using the .nav-icon class
-            with font-awesome or any other icon font library -->
-                <li class="nav-item ">
-                    <a href="" class="nav-link {{ Route::is('dash_about') ? 'active' : '' }}">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview">
+
+                <!-- Dashboard -->
+                <li class="nav-item">
+                    <a href="{{ route('admin.dashboard') }}"
+                        class="nav-link {{ Route::is('admin.dashboard') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Dashboard
-                        </p>
+                        <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="nav-item ">
-                    <a href="#" class="nav-link {{ Request::is('beranda') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-home {{ Request::is('beranda') ? 'active' : '' }}"></i>
-                        <p>
-                            Beranda
-                        </p>
+
+                <!-- Home -->
+                <li class="nav-item">
+                    <a href="{{ route('admin.home.index') }}"
+                        class="nav-link {{ Route::is('admin.home.*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-home"></i>
+                        <p>Home</p>
                     </a>
                 </li>
-                <li class="nav-item ">
-                    <a href="#" class="nav-link {{ Request::is('beranda') ? 'active' : '' }} ">
+
+                <!-- ABOUT (dropdown karena banyak tabel) -->
+                <li class="nav-item {{ Route::is('admin.about.*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ Route::is('admin.about.*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-user-friends"></i>
                         <p>
-                            Tentang kami
+                            Tentang
+                            <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>About Utama</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>About Section 2</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>About Section 3</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="nav-item ">
-                    <a href="#" class="nav-link {{ Request::is('beranda') ? 'active' : '' }}">
+
+                <!-- FAKULTAS -->
+                <li class="nav-item {{ Route::is('admin.class1.*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ Route::is('admin.class1.*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-school"></i>
                         <p>
                             Fakultas
+                            <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Fakultas</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Informasi Tambahan</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="nav-item ">
-                    <a href="#" class="nav-link {{ Request::is('beranda') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-person-booth"></i>
+
+                <!-- TEACHER -->
+                <li class="nav-item {{ Route::is('admin.teacher.*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ Route::is('admin.teacher.*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-chalkboard-teacher"></i>
                         <p>
-                            Tenaga Pengajar
+                            Pengajar
+                            <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Data Guru</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Testimoni</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="nav-item ">
-                    <a href="#" class="nav-link {{ Request::is('beranda') ? 'active' : '' }}">
+
+                <!-- BLOG -->
+                <li class="nav-item {{ Route::is('admin.blog.*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ Route::is('admin.blog.*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-newspaper"></i>
                         <p>
-                            Berita
+                            Blog
+                            <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Grid</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Detail</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="nav-item ">
-                    <a href="#" class="nav-link {{ Request::is('beranda') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-power-off"></i>
-                        <p>
-                            Log Out
-                        </p>
+
+                <!-- GALLERY -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-image"></i>
+                        <p>Gallery</p>
+                    </a>
+                </li>
+
+                <!-- CONTACT -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-phone"></i>
+                        <p>Contact</p>
                     </a>
                 </li>
 
             </ul>
         </nav>
-        <!-- /.sidebar-menu -->
     </div>
-    <!-- /.sidebar -->
 </aside>

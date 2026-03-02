@@ -16,7 +16,5 @@ class Home extends Model
         'title',
         'desc_title',
         'image',
-        'created_at',
-        'updated_at',
     ];
 }

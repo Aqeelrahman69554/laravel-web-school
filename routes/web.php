@@ -20,7 +20,6 @@ use App\Http\Controllers\visitor\BlogDetail2Controller;
 use App\Http\Controllers\visitor\GalleryController;
 
 use App\Http\Controllers\auth\AuthController;
-use App\Http\Controllers\auth\DashboardController;
 
 // use App\Models\BlogGridDetail1;
 
@@ -39,9 +38,10 @@ use App\Http\Controllers\admin\BlogGridController as AdminBlogGridController;
 use App\Http\Controllers\admin\BlogDetailController as AdminBlogDetailController;
 use App\Http\Controllers\admin\BlogDetail2Controller as AdminBlogDetail2Controller;
 use App\Http\Controllers\admin\GalleryController as AdminGalleryController;
+use App\Http\Controllers\admin\DashboardController;
 
 
-// VISITOR
+// VISITOR (FRONTEND)
 Route::name('visitor.')->group(function () {
 
     // HOME
@@ -87,9 +87,29 @@ Route::name('visitor.')->group(function () {
     Route::get('/footer', [FooterController::class, 'index'])->name('footer');
 });
 
-Route::get('/login', fn() => view('auth.login'))->name('login');
-Route::post('/auth', [AuthController::class, 'login']);
-Route::get('/dashboard', [DashboardController::class, 'index']);
-Route::get('/dash_about', fn() => view('admin.pages.dash_about'))->name('dash_about');
 
-Route::post('/login', [AuthController::class, 'login'])->name('login');
+// AUTH (LOGIN)
+Route::prefix('auth')->name('auth.')->group(function () {
+
+    // tampil login page
+    Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+
+    // proses login
+    Route::post('/login', [AuthController::class, 'login'])->name('login.process');
+
+    // logout
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+});
+
+
+// ADMIN (BACKEND)
+Route::prefix('admin')->name('admin.')->middleware('auth.custom')->group(function () {
+
+    // Dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    // Home
+    Route::resource('home', AdminHomeController::class);
+    // About
+    Route::resource('about', AdminAboutController::class);
+    Route::resource('about2', AdminAbout2Controller::class);
+});
