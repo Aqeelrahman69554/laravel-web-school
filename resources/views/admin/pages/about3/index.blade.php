@@ -9,9 +9,6 @@
                     <h3 class="card-title"><b>About Ketiga (Sejarah & Komitmen)</b></h3>
 
                     <div class="card-tools">
-                        <a href="{{ route('admin.about3.create') }}" class="btn btn-primary btn-sm">
-                            Tambah Data
-                        </a>
                     </div>
                 </div>
 
@@ -42,8 +39,8 @@
                                             @if ($item->image)
                                                 {{-- Cek apakah file dari seeder (public/images) atau upload (storage) --}}
                                                 @php
-                                                    $imagePath = file_exists(public_path('images/' . $item->image)) 
-                                                                ? asset('images/' . $item->image) 
+                                                    $imagePath = file_exists(public_path('images/' . $item->image))
+                                                                ? asset('images/' . $item->image)
                                                                 : asset('storage/' . $item->image);
                                                 @endphp
                                                 <img src="{{ $imagePath }}" width="120" class="img-thumbnail">
@@ -66,18 +63,10 @@
                                         <td>
                                             <a href="{{ route('admin.about3.edit', $item->id) }}"
                                                 class="btn btn-warning btn-sm">Edit</a>
-
-                                            <form action="{{ route('admin.about3.destroy', $item->id) }}" method="POST"
-                                                style="display:inline;"
-                                                onsubmit="return confirm('Yakin ingin menghapus data ini?')">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button class="btn btn-danger btn-sm">Hapus</button>
-                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach
-                                
+
                                 @if($data->isEmpty())
                                     <tr>
                                         <td colspan="5" class="text-center">Data belum tersedia.</td>

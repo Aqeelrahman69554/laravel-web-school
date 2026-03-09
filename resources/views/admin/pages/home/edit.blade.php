@@ -7,7 +7,7 @@
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">Edit Home Data</h3>
-                
+
                 <div class="card-tools">
                     <a href="{{ route('admin.home.index') }}" class="btn btn-secondary btn-sm">
                         Kembali
@@ -49,7 +49,7 @@
                     <div class="form-group">
                         <label for="image">Image</label>
                         <div class="mb-2">
-                            <img src="{{ asset('storage/' . $data->image) }}" width="150" class="img-thumbnail shadow-sm">
+                            <img src="{{ asset('images/home/' . $data->image) }}" width="150" class="img-thumbnail shadow-sm">
                         </div>
                         <input type="file" name="image" class="form-control-file" id="image">
                         <small class="text-muted text-italic">*Biarkan kosong jika tidak ingin mengubah gambar</small>

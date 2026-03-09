@@ -9,9 +9,6 @@
                     <h3 class="card-title"><b>About Utama</b></h3>
 
                     <div class="card-tools">
-                        <a href="{{ route('admin.about.create') }}" class="btn btn-primary btn-sm">
-                            Tambah Data
-                        </a>
                     </div>
                 </div>
 
@@ -75,14 +72,6 @@
                                         <td>
                                             <a href="{{ route('admin.about.edit', $item->id) }}"
                                                 class="btn btn-warning btn-sm">Edit</a>
-
-                                            <form action="{{ route('admin.about.destroy', $item->id) }}" method="POST"
-                                                style="display:inline;"
-                                                onsubmit="return confirm('Yakin ingin menghapus data ini?')">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button class="btn btn-danger btn-sm">Hapus</button>
-                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach
