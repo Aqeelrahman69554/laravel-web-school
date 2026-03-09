@@ -6,10 +6,10 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title"><b>About Utama</b></h3>
+                    <h3 class="card-title"><b>About Ketiga (Sejarah & Komitmen)</b></h3>
 
                     <div class="card-tools">
-                        <a href="{{ route('admin.about.create') }}" class="btn btn-primary btn-sm">
+                        <a href="{{ route('admin.about3.create') }}" class="btn btn-primary btn-sm">
                             Tambah Data
                         </a>
                     </div>
@@ -28,11 +28,9 @@
                             <thead>
                                 <tr>
                                     <th width="50">No</th>
-                                    <th>Gambar 1</th>
-                                    <th>Gambar 2</th>
-                                    <th>Title</th>
-                                    <th>Deskripsi</th>
-                                    <th>List Item</th>
+                                    <th>Banner Image</th>
+                                    <th>Konten Bagian 1 (Sejarah)</th>
+                                    <th>Konten Bagian 2 (Komitmen)</th>
                                     <th width="150">Aksi</th>
                                 </tr>
                             </thead>
@@ -41,42 +39,35 @@
                                     <tr>
                                         <td>{{ $i + 1 }}</td>
                                         <td>
-                                            @if ($item->image_1)
-                                                <img src="{{ asset('storage/' . $item->image_1) }}" width="80"
-                                                    class="img-thumbnail">
+                                            @if ($item->image)
+                                                {{-- Cek apakah file dari seeder (public/images) atau upload (storage) --}}
+                                                @php
+                                                    $imagePath = file_exists(public_path('images/' . $item->image)) 
+                                                                ? asset('images/' . $item->image) 
+                                                                : asset('storage/' . $item->image);
+                                                @endphp
+                                                <img src="{{ $imagePath }}" width="120" class="img-thumbnail">
                                             @else
                                                 <span class="badge badge-secondary">No Image</span>
                                             @endif
                                         </td>
                                         <td>
-                                            @if ($item->image_2)
-                                                <img src="{{ asset('storage/' . $item->image_2) }}" width="80"
-                                                    class="img-thumbnail">
-                                            @else
-                                                <span class="badge badge-secondary">No Image</span>
-                                            @endif
-                                        </td>
-                                        <td>{{ $item->title }}</td>
-                                        <td>
-                                            <div
-                                                style="max-height: 200px; overflow-y: auto; width: 250px; padding-right: 5px; text-align: justify">
-                                                {{ $item->desc_title }}
-                                            </div>
+                                            <strong>{{ $item->title_1 }}</strong>
+                                            <p class="text-muted mt-2" style="text-align: justify; font-size: 0.9rem;">
+                                                {{ $item->desc_title_1 }}
+                                            </p>
                                         </td>
                                         <td>
-                                            @if ($item->list)
-                                                <ul class="pl-3">
-                                                    @foreach ($item->list as $list_item)
-                                                        <li>{{ $list_item }}</li>
-                                                    @endforeach
-                                                </ul>
-                                            @endif
+                                            <strong>{{ $item->title_2 }}</strong>
+                                            <p class="text-muted mt-2" style="text-align: justify; font-size: 0.9rem;">
+                                                {{ $item->desc_title_2 }}
+                                            </p>
                                         </td>
                                         <td>
-                                            <a href="{{ route('admin.about.edit', $item->id) }}"
+                                            <a href="{{ route('admin.about3.edit', $item->id) }}"
                                                 class="btn btn-warning btn-sm">Edit</a>
 
-                                            <form action="{{ route('admin.about.destroy', $item->id) }}" method="POST"
+                                            <form action="{{ route('admin.about3.destroy', $item->id) }}" method="POST"
                                                 style="display:inline;"
                                                 onsubmit="return confirm('Yakin ingin menghapus data ini?')">
                                                 @csrf
@@ -86,6 +77,12 @@
                                         </td>
                                     </tr>
                                 @endforeach
+                                
+                                @if($data->isEmpty())
+                                    <tr>
+                                        <td colspan="5" class="text-center">Data belum tersedia.</td>
+                                    </tr>
+                                @endif
                             </tbody>
                         </table>
                     </div>

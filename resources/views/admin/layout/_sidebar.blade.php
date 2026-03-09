@@ -40,8 +40,8 @@
                 </li>
 
                 <!-- ABOUT (dropdown karena banyak tabel) -->
-                <li class="nav-item {{ Route::is('admin.about.*') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ Route::is('admin.about.*') ? 'active' : '' }}">
+                <li class="nav-item {{ Request::is('admin/about*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ Request::is('admin/about*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-user-friends"></i>
                         <p>
                             Tentang
@@ -50,29 +50,34 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                            <a href="{{ route('admin.about.index') }}"
+                                class="nav-link {{ Route::is('admin.about.*') ? 'active' : '' }}">
+                                <i
+                                    class="far {{ Route::is('admin.about.*') ? 'fa-dot-circle' : 'fa-circle' }} nav-icon"></i>
                                 <p>About Utama</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                            <a href="{{ route('admin.about2.index') }}"
+                                class="nav-link {{ Route::is('admin.about2.*') ? 'active' : '' }}">
+                                <i
+                                    class="far {{ Route::is('admin.about2.*') ? 'fa-dot-circle' : 'fa-circle' }} nav-icon"></i>
                                 <p>About Section 2</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                            <a href="{{ route('admin.about3.index') }}"
+                                class="nav-link {{ Route::is('admin.about3.*') ? 'active' : '' }}">
+                                <i
+                                    class="far {{ Route::is('admin.about3.*') ? 'fa-dot-circle' : 'fa-circle' }} nav-icon"></i>
                                 <p>About Section 3</p>
                             </a>
                         </li>
                     </ul>
                 </li>
-
                 <!-- FAKULTAS -->
                 <li class="nav-item {{ Route::is('admin.class1.*') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ Route::is('admin.class1.*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.class1.index') }}" class="nav-link {{ Route::is('admin.class1.*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-school"></i>
                         <p>
                             Fakultas
@@ -81,13 +86,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('admin.class1.index') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Fakultas</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('admin.class2.index') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Informasi Tambahan</p>
                             </a>
@@ -106,13 +111,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('admin.teacher.index') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Data Guru</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('admin.teacher2.index') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Testimoni</p>
                             </a>
@@ -131,13 +136,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('admin.blog_grid.index') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Grid</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('admin.blog_detail.index') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Detail</p>
                             </a>
@@ -155,7 +160,7 @@
 
                 <!-- CONTACT -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('admin.contact.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-phone"></i>
                         <p>Contact</p>
                     </a>

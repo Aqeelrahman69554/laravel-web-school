@@ -51,6 +51,8 @@
 
     {{-- INCLUDE SCRIPT --}}
     @include('admin.layout._script')
+
+    @stack('script')
 </body>
 
 </html>

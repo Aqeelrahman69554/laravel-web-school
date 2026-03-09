@@ -111,5 +111,26 @@ Route::prefix('admin')->name('admin.')->middleware('auth.custom')->group(functio
     Route::resource('home', AdminHomeController::class);
     // About
     Route::resource('about', AdminAboutController::class);
+    
     Route::resource('about2', AdminAbout2Controller::class);
+    
+    Route::resource('about3', AdminAbout3Controller::class);
+
+    //CLASS
+    Route::resource('class1', AdminClass1Controller::class);
+
+    Route::resource('class2', AdminClass2Controller::class);
+
+    //TEACHER
+    Route::resource('teacher', AdminTeacherController::class);
+
+    Route::resource('teacher2', AdminTeacher2Controller::class);
+
+    //BLOG
+    Route::resource('blog_grid', AdminBlogGridController::class);
+
+    Route::resource('blog_detail', AdminBlogDetailController::class);
+
+    //CONTACT
+    Route::resource('contact', AdminContactController::class);
 });
