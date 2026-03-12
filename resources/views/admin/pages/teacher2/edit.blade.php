@@ -34,7 +34,7 @@
                         <br>
                         <small class="text-muted">Foto saat ini:</small><br>
                         @php
-                            $url = file_exists(public_path('images/'.$item->image)) ? asset('images/'.$item->image) : asset('storage/'.$item->image);
+                            $url = file_exists(public_path('images/'.$item->image)) ? asset('images/'.$item->image) : asset('images/teacher2/'.$item->image);
                         @endphp
                         <img src="{{ $url }}" width="100" class="img-thumbnail mt-1">
                     </div>

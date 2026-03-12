@@ -33,7 +33,7 @@
                                 @php
                                     $imagePath = file_exists(public_path('images/' . $about->image)) 
                                                 ? asset('images/' . $about->image) 
-                                                : asset('storage/' . $about->image);
+                                                : asset('images/about/' . $about->image);
                                 @endphp
                                 <img src="{{ $imagePath }}" id="preview" class="img-fluid border rounded" style="max-height: 250px;">
                             @endif

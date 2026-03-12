@@ -36,7 +36,7 @@
                                 <td>{{ $i + 1 }}</td>
                                 <td>
                                     @php
-                                        $url = file_exists(public_path('images/'.$item->image)) ? asset('images/'.$item->image) : asset('storage/'.$item->image);
+                                        $url = file_exists(public_path('images/'.$item->image)) ? asset('images/'.$item->image) : asset('images/teacher/'.$item->image);
                                     @endphp
                                     <img src="{{ $url }}" width="80" class="img-circle border shadow-sm">
                                 </td>

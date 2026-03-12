@@ -133,4 +133,7 @@ Route::prefix('admin')->name('admin.')->middleware('auth.custom')->group(functio
 
     //CONTACT
     Route::resource('contact', AdminContactController::class);
+
+     // GALLERY
+    Route::resource('gallery', AdminGalleryController::class);
 });

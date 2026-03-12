@@ -20,10 +20,15 @@
                         </div>
                     @endif
 
+                    <div class="callout callout-info border-left-3">
+                        <h5><i class="fas fa-info-circle mr-2 text-info"></i> Info Pengeditan</h5>
+                        <p class="mb-0 text-muted">Data <b>List Item</b> bersifat relasional. Untuk menambah atau menghapus
+                            butir list, harap gunakan tombol <b><i class="fas fa-edit"></i> Edit</b>.</p>
+                    </div>
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped">
                             <thead>
-                                <tr>
+                                <tr style="text-align: center">
                                     <th width="50">No</th>
                                     <th>Gambar 1</th>
                                     <th>Gambar 2</th>
@@ -39,7 +44,7 @@
                                         <td>{{ $i + 1 }}</td>
                                         <td>
                                             @if ($item->image_1)
-                                                <img src="{{ asset('storage/' . $item->image_1) }}" width="80"
+                                                <img src="{{ asset('images/about/' . $item->image_1) }}" width="80"
                                                     class="img-thumbnail">
                                             @else
                                                 <span class="badge badge-secondary">No Image</span>
@@ -47,7 +52,7 @@
                                         </td>
                                         <td>
                                             @if ($item->image_2)
-                                                <img src="{{ asset('storage/' . $item->image_2) }}" width="80"
+                                                <img src="{{ asset('images/about/' . $item->image_2) }}" width="80"
                                                     class="img-thumbnail">
                                             @else
                                                 <span class="badge badge-secondary">No Image</span>
@@ -71,7 +76,7 @@
                                         </td>
                                         <td>
                                             <a href="{{ route('admin.about.edit', $item->id) }}"
-                                                class="btn btn-warning btn-sm">Edit</a>
+                                                class="btn btn-warning btn-sm" style="width: 150px">Edit</a>
                                         </td>
                                     </tr>
                                 @endforeach

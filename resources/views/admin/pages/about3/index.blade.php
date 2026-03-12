@@ -22,7 +22,7 @@
 
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped">
-                            <thead>
+                            <thead style="text-align: center;">
                                 <tr>
                                     <th width="50">No</th>
                                     <th>Banner Image</th>
@@ -41,9 +41,9 @@
                                                 @php
                                                     $imagePath = file_exists(public_path('images/' . $item->image))
                                                                 ? asset('images/' . $item->image)
-                                                                : asset('storage/' . $item->image);
+                                                                : asset('images/about/' . $item->image);
                                                 @endphp
-                                                <img src="{{ $imagePath }}" width="120" class="img-thumbnail">
+                                                <img src="{{ $imagePath }}" width="700" class="img-thumbnail">
                                             @else
                                                 <span class="badge badge-secondary">No Image</span>
                                             @endif
@@ -62,7 +62,7 @@
                                         </td>
                                         <td>
                                             <a href="{{ route('admin.about3.edit', $item->id) }}"
-                                                class="btn btn-warning btn-sm">Edit</a>
+                                                class="btn btn-warning btn-sm" style="width: 140px; text">Edit</a>
                                         </td>
                                     </tr>
                                 @endforeach

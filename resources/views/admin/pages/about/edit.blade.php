@@ -49,7 +49,7 @@
                                     <label for="image_1">Gambar 1</label>
                                     <div class="mb-2">
                                         @if ($about->image_1)
-                                            <img src="{{ asset('storage/' . $about->image_1) }}" width="150"
+                                            <img src="{{ asset('images/about/' . $about->image_1) }}" width="150"
                                                 class="img-thumbnail shadow-sm">
                                         @else
                                             <p class="text-muted">Tidak ada gambar</p>
@@ -64,7 +64,7 @@
                                     <label for="image_2">Gambar 2</label>
                                     <div class="mb-2">
                                         @if ($about->image_2)
-                                            <img src="{{ asset('storage/' . $about->image_2) }}" width="150"
+                                            <img src="{{ asset('images/about/' . $about->image_2) }}" width="150"
                                                 class="img-thumbnail shadow-sm">
                                         @else
                                             <p class="text-muted">Tidak ada gambar</p>

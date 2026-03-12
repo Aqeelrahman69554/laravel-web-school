@@ -44,7 +44,7 @@
                                                 @php
                                                     $imagePath = file_exists(public_path('images/' . $item->image)) 
                                                                 ? asset('images/' . $item->image) 
-                                                                : asset('storage/' . $item->image);
+                                                                : asset('images/class/' . $item->image);
                                                 @endphp
                                                 <img src="{{ $imagePath }}" width="120" class="img-thumbnail">
                                             @else

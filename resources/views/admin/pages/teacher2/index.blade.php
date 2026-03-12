@@ -34,7 +34,7 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         @php
-                                            $url = file_exists(public_path('images/'.$item->image)) ? asset('images/'.$item->image) : asset('storage/'.$item->image);
+                                            $url = file_exists(public_path('images/'.$item->image)) ? asset('images/'.$item->image) : asset('images/teacher2/'.$item->image);
                                         @endphp
                                         <img src="{{ $url }}" width="60" height="60" class="img-circle border mr-3" style="object-fit: cover;">
                                         <div>

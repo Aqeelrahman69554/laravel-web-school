@@ -13,31 +13,37 @@
                     <li class="btn btn-outline-primary m-1 active" data-filter="*">
                         All
                     </li>
-                    <li class="btn btn-outline-primary m-1" data-filter=".first">
-                        Playing
+                    <li class="btn btn-outline-primary m-1" data-filter=".gedung">
+                        Pergedungan
                     </li>
-                    <li class="btn btn-outline-primary m-1" data-filter=".second">
-                        Drawing
+                    <li class="btn btn-outline-primary m-1" data-filter=".acara">
+                        Acara
                     </li>
-                    <li class="btn btn-outline-primary m-1" data-filter=".third">
-                        Reading
+                    <li class="btn btn-outline-primary m-1" data-filter=".prestasi">
+                        Prestasi
                     </li>
                 </ul>
             </div>
         </div>
-       
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                <div class="position-relative overflow-hidden mb-2">
-                    <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="" />
-                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                        <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
-                            <i class="fa fa-plus text-white" style="font-size: 60px"></i>
-                        </a>
+        <div class="row portfolio-container">
+            @foreach ($gallery as $item)
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item {{ $item->category }}">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid w-100" src="{{ asset('images/gallery/' . $item->image) }}"
+                            alt="" />
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="{{ asset('images/gallery/' . $item->image) }}" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        
+            @endforeach
+        </div>
+
 
     </div>
 </div>
 <!-- Gallery End -->
+
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>

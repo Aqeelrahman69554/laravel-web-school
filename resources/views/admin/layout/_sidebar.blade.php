@@ -152,7 +152,7 @@
 
                 <!-- GALLERY -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('admin.gallery.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-image"></i>
                         <p>Gallery</p>
                     </a>

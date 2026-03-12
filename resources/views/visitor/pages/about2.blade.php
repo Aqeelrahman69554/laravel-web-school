@@ -5,7 +5,7 @@
             @foreach ($about2 as $item)
                 <div class="col-lg-4 col-md-6 pb-1">
                     <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px">
-                        <i class="{{ $item->icon }} h1 font-weight-normal text-primary mb-3"></i>
+                        <i class="{{ $item->icon }} text-primary" style="font-size: 3rem; margin-right: 20px;"></i>
                         <div class="pl-4">
                             <h4>{{ $item->title }}</h4>
                             <p class="m-0">
