@@ -35,12 +35,12 @@ class ContactController extends Controller
     {
         $item = Contact::findOrFail($id);
         $item->update($request->all());
-        return redirect()->route('admin.pages.contact.index')->with('success', 'Kontak berhasil diperbarui');
+        return redirect()->route('admin.contact.index')->with('success', 'Kontak berhasil diperbarui');
     }
 
     public function destroy($id)
     {
         Contact::findOrFail($id)->delete();
-        return redirect()->route('admin.pages.contact.index')->with('success', 'Kontak berhasil dihapus');
+        return redirect()->route('admin.contact.index')->with('success', 'Kontak berhasil dihapus');
     }
 }
