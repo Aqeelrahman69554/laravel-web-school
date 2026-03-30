@@ -6,7 +6,7 @@
                     <p class="section-title pr-5">
                         <span class="pr-2">Blog</span>
                     </p>
-                    <h1 class="mb-3">{{ $blogdetail->title_1 }}</h1>
+                    <h1 class="mb-3">{{ $item->title_1 }}</h1>
                     <div class="d-flex">
                         <p class="mr-3">
                             <i class="fa fa-user text-primary"></i> Admin
@@ -23,7 +23,7 @@
                 <div class="mb-5">
                     <img class="img-fluid rounded w-100 mb-4" src="{{ asset('images/blog_detail/artikel-internasional-1.jpg') }}" alt="Image" />
                     <p style="text-align: justify">
-                        {{ $blogdetail->desc_title_1 }}
+                        {{ $item->desc_title_1 }}
                     </p>
                     {{-- <p>
                         Voluptua est takimata stet invidunt sed rebum nonumy
@@ -36,10 +36,10 @@
                         elitr, stet et no diam sit. Dolor erat justo dolore
                         sit invidunt.
                     </p> --}}
-                    <h2 class="mb-4">{{ $blogdetail->title_2}}</h2>
+                    <h2 class="mb-4">{{ $item->title_2}}</h2>
                     <img class="img-fluid rounded w-50 float-left mr-4 mb-3" src="{{ asset('images/blog_detail/artikel-internasional-2.jpg') }}" alt="Image" />
                     <p style="text-align: justify">
-                        {{ $blogdetail->desc_title_2 }}
+                        {{ $item->desc_title_2 }}
                     </p>
                     {{-- <h3 class="mb-4">Est dolor lorem et ea</h3>
                     <img class="img-fluid rounded w-50 float-right ml-4 mb-3" src="img/blog-2.jpg" alt="Image" />

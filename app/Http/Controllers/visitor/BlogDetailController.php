@@ -15,4 +15,10 @@ class BlogDetailController extends Controller
 
         return view('visitor.pages.bos.blogDetail_page', compact('blogdetail', 'blogdetail2'));
     }
+
+    public function show($id){
+        $item = \App\Models\BlogGrid::findOrFail($id);
+
+        return view('visitor.pages.blog_detail', compact('item'));
+    }
 }

@@ -57,7 +57,7 @@ class BlogDetailController extends Controller
         }
 
         $item->update($data);
-        return redirect()->route('admin.pages.blog_detail.index')->with('success', 'Data berhasil diperbarui');
+        return redirect()->route('admin.blog_detail.index')->with('success', 'Data berhasil diperbarui');
     }
 
     public function destroy($id)
@@ -67,6 +67,6 @@ class BlogDetailController extends Controller
         if ($item->image_2) Storage::disk('public')->delete($item->image_2);
         
         $item->delete();
-        return redirect()->route('admin.pages.blog_detail.index')->with('success', 'Data berhasil dihapus');
+        return redirect()->route('admin.blog_detail.index')->with('success', 'Data berhasil dihapus');
     }
 }

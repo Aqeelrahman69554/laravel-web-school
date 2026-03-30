@@ -33,8 +33,8 @@
                                         <td class="text-center">{{ $i + 1 }}</td>
                                         <td class="text-center">
                                             @php
-                                                $url = file_exists(public_path('images/' . $item->image))
-                                                    ? asset('images/' . $item->image)
+                                                $url = file_exists(public_path('images/blogrid/' . $item->image))
+                                                    ? asset('images/bloggrid/' . $item->image)
                                                     : asset('storage/' . $item->image);
                                             @endphp
                                             <img src="{{ $url }}" width="120" class="img-thumbnail shadow-sm">

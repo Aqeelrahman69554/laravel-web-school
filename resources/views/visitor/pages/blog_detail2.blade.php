@@ -2,7 +2,7 @@
     <!-- Author Bio -->
     <div class="d-flex flex-column text-center bg-primary rounded mb-5 py-5 px-4">
         <img src="{{ asset('images/blog_detail/rektor-uin-suka.jpg') }}" class="img-fluid rounded-circle mx-auto mb-3" style="width: 100px" />
-        <h3 class="text-secondary mb-3">{{$blogdetail2->name}}</h3>
+        <h3 class="text-secondary mb-3">{{$item->name}}</h3>
         <p class="text-white m-0">
             "Mendedikasikan diri pada pengembangan paradigma Integrasi-Interkoneksi, menjembatani khazanah teks suci dengan ketajaman sains demi mewujudkan peradaban Islam yang moderat dan mendunia."
         </p>

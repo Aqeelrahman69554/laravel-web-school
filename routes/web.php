@@ -74,8 +74,11 @@ Route::name('visitor.')->group(function () {
     //BLOG GRID
     Route::get('/blog_grid', [BlogGridController::class, 'index'])->name('blog_grid');
 
-    //BLOG DETAIL
-    Route::get('/blog_detail', [BlogDetailController::class, 'index'])->name('blog_detail');
+    // //BLOG DETAIL
+    // Route::get('/blog_detail', [BlogDetailController::class, 'index'])->name('blog_detail');
+
+    //BLOG DETAIL ID
+    Route::get('/blog_detail/{id}', [BlogDetailController::class, 'show'])->name('blog_detail');
 
     //BLOG DETAIL2
     Route::get('/blog_detail2', [BlogDetail2Controller::class, 'index'])->name('blog_detail2');
@@ -130,6 +133,7 @@ Route::prefix('admin')->name('admin.')->middleware('auth.custom')->group(functio
     Route::resource('blog_grid', AdminBlogGridController::class);
 
     Route::resource('blog_detail', AdminBlogDetailController::class);
+    
 
     //CONTACT
     Route::resource('contact', AdminContactController::class);

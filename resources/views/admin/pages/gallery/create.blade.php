@@ -27,7 +27,7 @@
                                 <option value="prestasi" {{ $data->category == 'prestasi' ? 'selected' : '' }}>Prestasi</option>
                                 <option value="acara" {{ $data->category == 'acara' ? 'selected' : '' }}>Acara</option>
                             </select>
-                            
+
                         </div>
 
                         <div class="form-group">
