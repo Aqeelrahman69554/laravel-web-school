@@ -29,8 +29,15 @@ class Class1Controller extends Controller
         ]);
 
         $data = $request->all();
+
         if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('fakultas', 'public');
+            $file = $request->file('image');
+            // Mengambil nama asli file
+            $fileName = time() . '_' . $file->getClientOriginalName();
+            // Pindahkan ke public/images/class/
+            $file->move(public_path('images/class'), $fileName);
+            // Simpan hanya nama filenya saja ke database
+            $data['image'] = $fileName;
         }
 
         Class1::create($data);
@@ -49,10 +56,21 @@ class Class1Controller extends Controller
         $data = $request->all();
 
         if ($request->hasFile('image')) {
-            if ($item->image && Storage::disk('public')->exists($item->image)) {
-                Storage::disk('public')->delete($item->image);
+            // 1. Hapus foto lama jika ada di folder public
+            $oldPath = public_path('images/class/' . $item->image);
+            if ($item->image && file_exists($oldPath)) {
+                unlink($oldPath);
             }
-            $data['image'] = $request->file('image')->store('fakultas', 'public');
+
+            // 2. Upload foto baru dengan nama asli
+            $file = $request->file('image');
+            $fileName = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('images/class'), $fileName);
+
+            $data['image'] = $fileName;
+        } else {
+            // Tetap gunakan gambar lama jika tidak ada upload baru
+            $data['image'] = $item->image;
         }
 
         $item->update($data);
