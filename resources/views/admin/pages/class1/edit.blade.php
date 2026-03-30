@@ -31,7 +31,7 @@
                     <div class="row">
                         <div class="col-md-7 border-right">
                             <h5 class="text-primary mb-3"><i class="fas fa-university"></i> Identitas Fakultas</h5>
-                            
+
                             <div class="form-group">
                                 <label>Nama Fakultas (Title 1)</label>
                                 <input type="text" name="title_1" class="form-control" value="{{ old('title_1', $item->title_1) }}" required>
@@ -55,8 +55,8 @@
                                 <label>Banner Fakultas</label>
                                 <div class="mb-3">
                                     @php
-                                        $imagePath = file_exists(public_path('images/' . $item->image)) 
-                                                    ? asset('images/' . $item->image) 
+                                        $imagePath = file_exists(public_path('images/class/' . $item->image))
+                                                    ? asset('images/class/' . $item->image)
                                                     : asset('images/class/' . $item->image);
                                     @endphp
                                     <img src="{{ $imagePath }}" id="preview" class="img-fluid border rounded shadow-sm" style="max-height: 180px;">

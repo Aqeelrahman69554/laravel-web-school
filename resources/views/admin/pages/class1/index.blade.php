@@ -39,17 +39,8 @@
                                     <tr>
                                         <td>{{ $i + 1 }}</td>
                                         <td>
-                                            @if ($item->image)
-                                                {{-- Cek apakah file dari seeder (public/images) atau upload (storage) --}}
-                                                @php
-                                                    $imagePath = file_exists(public_path('images/' . $item->image)) 
-                                                                ? asset('images/' . $item->image) 
-                                                                : asset('images/class/' . $item->image);
-                                                @endphp
-                                                <img src="{{ $imagePath }}" width="120" class="img-thumbnail">
-                                            @else
-                                                <span class="badge badge-secondary">No Image</span>
-                                            @endif
+                                            <img src="{{ asset('images/class/' . $item->image) }}" width="80"
+                                                height="60" class="img-thumbnail" style="object-fit:cover;">
                                         </td>
                                         <td>
                                             <strong>{{ $item->title_1 }}</strong>
@@ -80,8 +71,8 @@
                                         </td>
                                     </tr>
                                 @endforeach
-                                
-                                @if($data->isEmpty())
+
+                                @if ($data->isEmpty())
                                     <tr>
                                         <td colspan="5" class="text-center">Data fakultas belum tersedia.</td>
                                     </tr>

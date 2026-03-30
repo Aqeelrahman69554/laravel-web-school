@@ -5,7 +5,7 @@
             <p class="section-title px-5">
                 <span class="px-2">Layanan Informasi</span>
             </p>
-            <h1 class="mb-4">Sampaikan Pertanyaan Anda</h1>
+            <h1 class="mb-4">{{ $contact->title }}</h1>
         </div>
         <div class="row">
             <div class="col-lg-7 mb-5">
@@ -73,7 +73,7 @@
                         style="width: 45px; height: 45px"></i>
                     <div class="pl-3">
                         <h5>Jam Operasional Layanan</h5>
-                        
+
                         <p class="m-0">{{ $contact->open }}</p>
                     </div>
                 </div>

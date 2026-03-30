@@ -16,6 +16,8 @@
             <thead>
                 <tr>
                     <th>Judul</th>
+                    <th>Deskripsi</th>
+                    <th>Alamat</th>
                     <th>Email</th>
                     <th>Telepon</th>
                     <th>Jam Operasional</th>
@@ -26,6 +28,8 @@
                 @foreach($data as $item)
                 <tr>
                     <td>{{ $item->title }}</td>
+                    <td>{{ Str::limit($item->desc_title, 50) }}</td>
+                    <td>{{ $item->address }}</td>
                     <td>{{ $item->email }}</td>
                     <td>{{ $item->phone }}</td>
                     <td>{{ $item->open }}</td>
