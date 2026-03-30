@@ -26,9 +26,9 @@
                             <select name="category" class="form-control" id="">
                                 <option value="pergedungan" {{ $data->category == 'pergedungan' ? 'selected' : '' }}>
                                     Pergedungan</option>
-                                <option value="prestasi" {{ $data->category == 'prestasi' ? 'selected' : '' }}>prestasi
+                                <option value="prestasi" {{ $data->category == 'prestasi' ? 'selected' : '' }}>Prestasi
                                 </option>
-                                <option value="acara" {{ $data->category == 'acara' ? 'selected' : '' }}>acara</option>
+                                <option value="acara" {{ $data->category == 'acara' ? 'selected' : '' }}>Acara</option>
                             </select>
 
                         </div>

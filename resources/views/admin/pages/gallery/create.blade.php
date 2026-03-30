@@ -23,11 +23,11 @@
                         <div class="form-group">
                             <label>Category</label>
                             <select name="category" class="form-control">
-                                <option value="pergedungan" {{ $data->category == 'pergedungan' ? 'selected' : '' }}>Pergedugan</option>
-                                <option value="prestasi" {{ $data->category == 'prestasi' ? 'selected' : '' }}>Prestasi</option>
-                                <option value="acara" {{ $data->category == 'acara' ? 'selected' : '' }}>Acara</option>
+                                <option value="">-- Pilih Category --</option>
+                                <option value="pergedungan">Pergedungan</option>
+                                <option value="prestasi">Prestasi</option>
+                                <option value="acara">Acara</option>
                             </select>
-
                         </div>
 
                         <div class="form-group">
