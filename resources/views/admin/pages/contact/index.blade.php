@@ -5,7 +5,7 @@
     <div class="card-header">
         <h3 class="card-title"><b>Data Kontak</b></h3>
         <div class="card-tools">
-            <a href="{{ route('admin.contact.create') }}" class="btn btn-primary btn-sm">Tambah Kontak</a>
+            {{-- <a href="{{ route('admin.contact.create') }}" class="btn btn-primary btn-sm">Tambah Kontak</a> --}}
         </div>
     </div>
     <div class="card-body">
