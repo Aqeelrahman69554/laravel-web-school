@@ -19,11 +19,7 @@ class ContactController extends Controller
     //     return view('admin.pages.contact.create');
     // }
 
-    // public function store(Request $request)
-    // {
-    //     Contact::create($request->all());
-    //     return redirect()->route('admin.contact.index')->with('success', 'Kontak berhasil ditambahkan');
-    // }
+    
 
     public function edit($id)
     {

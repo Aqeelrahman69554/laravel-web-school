@@ -9,36 +9,36 @@
         </div>
         <div class="row">
             <div class="col-lg-7 mb-5">
-                <div class="contact-form">
-                    <div id="success"></div>
-                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                        <div class="control-group">
-                            <input type="text" class="form-control" id="name" placeholder="Nama Lengkap"
-                                required="required" data-validation-required-message="Please enter your name" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <input type="email" class="form-control" id="email" placeholder="Alamat Email"
-                                required="required" data-validation-required-message="Please enter your email" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <input type="text" class="form-control" id="subject" placeholder="Subjek"
-                                required="required" data-validation-required-message="Please enter a subject" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <textarea class="form-control" rows="6" id="message" placeholder="Pesan Anda" required="required"
-                                data-validation-required-message="Please enter your message"></textarea>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">
-                                Kirim Pesan
-                            </button>
-                        </div>
-                    </form>
-                </div>
+                @if (session('success'))
+                    <div id="success-alert" class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                <form action="{{ route('contact.store') }}" method="POST">
+                    @csrf
+
+                    <div class="control-group mb-3">
+                        <input type="text" name="name" class="form-control" placeholder="Nama Lengkap" required>
+                    </div>
+
+                    <div class="control-group mb-3">
+                        <input type="email" name="email" class="form-control" placeholder="Alamat Email" required>
+                    </div>
+
+                    <div class="control-group mb-3">
+                        <input type="text" name="subject" class="form-control" placeholder="Subjek" required>
+                    </div>
+
+                    <div class="control-group mb-3">
+                        <textarea name="message" class="form-control" rows="6" placeholder="Pesan Anda" required></textarea>
+                    </div>
+
+                    <div>
+                        <button class="btn btn-primary py-2 px-4" type="submit">
+                            Kirim Pesan
+                        </button>
+                    </div>
+                </form>
             </div>
             <div class="col-lg-5 mb-5">
                 <p>
@@ -81,4 +81,16 @@
         </div>
     </div>
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function () {
+            let alert = document.getElementById('success-alert');
+            if (alert) {
+                alert.style.transition = "opacity 0.5s";
+                alert.style.opacity = "0";
+                setTimeout(() => alert.remove(), 500);
+            }
+        }, 3000);
+    });
+</script>
 <!-- Contact End -->

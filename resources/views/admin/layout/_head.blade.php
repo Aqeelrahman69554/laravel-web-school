@@ -28,4 +28,24 @@
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('adminlte/plugins/summernote/summernote-bs4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('visitor/lib/flaticon/font/flaticon.css') }}">
+
+    <style>
+    /* SUB MENU AKTIF JADI PUTIH */
+    .nav-treeview .nav-link.active {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        border-radius: 5px;
+    }
+
+    /* ICON SUB MENU IKUT HITAM */
+    .nav-treeview .nav-link.active i {
+        color: #000000 !important;
+    }
+
+    /* HOVER SUB MENU */
+    .nav-treeview .nav-link:hover {
+        background-color: #f4f4f4;
+        color: #000000;
+    }
+</style>
 </head>

@@ -34,6 +34,7 @@ use App\Http\Controllers\admin\TeacherController as AdminTeacherController;
 use App\Http\Controllers\admin\Teacher2Controller as AdminTeacher2Controller;
 use App\Http\Controllers\admin\FooterController as AdminFooterController;
 use App\Http\Controllers\admin\ContactController as AdminContactController;
+use App\Http\Controllers\admin\Contact_2Controller as AdminContact_2Controller;
 use App\Http\Controllers\admin\BlogGridController as AdminBlogGridController;
 use App\Http\Controllers\admin\BlogDetailController as AdminBlogDetailController;
 use App\Http\Controllers\admin\BlogDetail2Controller as AdminBlogDetail2Controller;
@@ -86,9 +87,11 @@ Route::name('visitor.')->group(function () {
     //GALLERY
     Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
 
+
     //FOOTER
     Route::get('/footer', [FooterController::class, 'index'])->name('footer');
-});
+    });
+    Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 
 // AUTH (LOGIN)
@@ -105,6 +108,8 @@ Route::prefix('auth')->name('auth.')->group(function () {
 });
 
 
+
+
 // ADMIN (BACKEND)
 Route::prefix('admin')->name('admin.')->middleware('auth.custom')->group(function () {
 
@@ -114,9 +119,9 @@ Route::prefix('admin')->name('admin.')->middleware('auth.custom')->group(functio
     Route::resource('home', AdminHomeController::class);
     // About
     Route::resource('about', AdminAboutController::class);
-    
+
     Route::resource('about2', AdminAbout2Controller::class);
-    
+
     Route::resource('about3', AdminAbout3Controller::class);
 
     //CLASS
@@ -133,10 +138,13 @@ Route::prefix('admin')->name('admin.')->middleware('auth.custom')->group(functio
     Route::resource('blog_grid', AdminBlogGridController::class);
 
     Route::resource('blog_detail', AdminBlogDetailController::class);
-    
+
 
     //CONTACT
     Route::resource('contact', AdminContactController::class);
+
+    Route::resource('message', AdminContact_2Controller::class);
+
 
      // GALLERY
     Route::resource('gallery', AdminGalleryController::class);

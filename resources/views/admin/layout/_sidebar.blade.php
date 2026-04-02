@@ -76,8 +76,10 @@
                     </ul>
                 </li>
                 <!-- FAKULTAS -->
-                <li class="nav-item {{ Route::is('admin.class1.*') ? 'menu-open' : '' }}">
-                    <a href="{{ route('admin.class1.index') }}" class="nav-link {{ Route::is('admin.class1.*') ? 'active' : '' }}">
+                <li
+                    class="nav-item {{ Request::is('admin/class1*') || Request::is('admin/class2*') ? 'menu-open' : '' }}">
+                    <a href="{{ route('admin.class1.index') }}"
+                        class="nav-link {{ Request::is('admin/class1*') || Request::is('admin/class2*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-school"></i>
                         <p>
                             Fakultas
@@ -86,14 +88,18 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('admin.class1.index') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                            <a href="{{ route('admin.class1.index') }}"
+                                class="nav-link {{ Route::is('admin.class1.*') ? 'active' : '' }}">
+                                <i
+                                    class="far {{ Route::is('admin.class1.*') ? 'fa-dot-circle' : 'fa-circle' }} nav-icon"></i>
                                 <p>Fakultas</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.class2.index') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                            <a href="{{ route('admin.class2.index') }}"
+                                class="nav-link {{ Route::is('admin.class2.*') ? 'active' : '' }}">
+                                <i
+                                    class="far {{ Route::is('admin.class2.*') ? 'fa-dot-circle' : 'fa-circle' }} nav-icon"></i>
                                 <p>Informasi Tambahan</p>
                             </a>
                         </li>
@@ -101,8 +107,10 @@
                 </li>
 
                 <!-- TEACHER -->
-                <li class="nav-item {{ Route::is('admin.teacher.*') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ Route::is('admin.teacher.*') ? 'active' : '' }}">
+                <li
+                    class="nav-item {{ Request::is('admin/teacher*') || Request::is('admin/teacher2*') ? 'menu-open' : '' }}">
+                    <a href="#"
+                        class="nav-link {{ Request::is('admin/teacher*') || Request::is('admin/teacher2*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-chalkboard-teacher"></i>
                         <p>
                             Pengajar
@@ -111,14 +119,18 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('admin.teacher.index') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                            <a href="{{ route('admin.teacher.index') }}"
+                                class="nav-link {{ Route::is('admin.teacher.*') ? 'active' : '' }}">
+                                <i
+                                    class="far {{ Route::is('admin.teacher.*') ? 'fa-dot-circle' : 'fa-circle' }} nav-icon"></i>
                                 <p>Data Guru</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.teacher2.index') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                            <a href="{{ route('admin.teacher2.index') }}"
+                                class="nav-link {{ Route::is('admin.teacher2.*') ? 'active' : '' }}">
+                                <i
+                                    class="far {{ Route::is('admin.teacher2.*') ? 'fa-dot-circle' : 'fa-circle' }} nav-icon"></i>
                                 <p>Testimoni</p>
                             </a>
                         </li>
@@ -126,8 +138,10 @@
                 </li>
 
                 <!-- BLOG -->
-                <li class="nav-item {{ Route::is('admin.blog.*') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ Route::is('admin.blog.*') ? 'active' : '' }}">
+                <li
+                    class="nav-item {{ Request::is('admin/blog*') || Request::is('admin/blog_grid*') || Request::is('admin/blog_detail*') ? 'menu-open' : '' }}">
+                    <a href="#"
+                        class="nav-link {{ Request::is('admin/blog*') || Request::is('admin/blog_grid*') || Request::is('admin/blog_detail*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-newspaper"></i>
                         <p>
                             Blog
@@ -136,14 +150,18 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('admin.blog_grid.index') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                            <a href="{{ route('admin.blog_grid.index') }}"
+                                class="nav-link {{ Route::is('admin.blog_grid.*') ? 'active' : '' }}">
+                                <i
+                                    class="far {{ Route::is('admin.blog_grid.*') ? 'fa-dot-circle' : 'fa-circle' }} nav-icon"></i>
                                 <p>Grid</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.blog_detail.index') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                            <a href="{{ route('admin.blog_detail.index') }}"
+                                class="nav-link {{ Route::is('admin.blog_detail.*') ? 'active' : '' }}">
+                                <i
+                                    class="far {{ Route::is('admin.blog_detail.*') ? 'fa-dot-circle' : 'fa-circle' }} nav-icon"></i>
                                 <p>Detail</p>
                             </a>
                         </li>
@@ -152,7 +170,7 @@
 
                 <!-- GALLERY -->
                 <li class="nav-item">
-                    <a href="{{ route('admin.gallery.index') }}" class="nav-link">
+                    <a href="{{ route('admin.gallery.index') }}" class="nav-link {{ Route::is('admin.gallery.*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-image"></i>
                         <p>Gallery</p>
                     </a>
@@ -160,9 +178,17 @@
 
                 <!-- CONTACT -->
                 <li class="nav-item">
-                    <a href="{{ route('admin.contact.index') }}" class="nav-link">
+                    <a href="{{ route('admin.contact.index') }}" class="nav-link {{ Route::is('admin.contact.*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-phone"></i>
                         <p>Contact</p>
+                    </a>
+                </li>
+
+                {{-- MESSAGE VISITOR --}}
+                <li class="nav-item">
+                    <a href="{{ route('admin.message.index') }}" class="nav-link {{ Route::is('admin.message.*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-paper-plane"></i>
+                        <p>Message</p>
                     </a>
                 </li>
 
