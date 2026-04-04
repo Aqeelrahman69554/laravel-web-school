@@ -3,9 +3,9 @@
     <div class="container">
         <div class="text-center pb-2">
             <p class="section-title px-5">
-                <span class="px-2">Our Gallery</span>
+                <span class="px-2">Gallery Kami</span>
             </p>
-            <h1 class="mb-4">Our Kids School Gallery</h1>
+            <h1 class="mb-4">Gallery</h1>
         </div>
         <div class="row">
             <div class="col-12 text-center mb-2">
@@ -13,7 +13,7 @@
                     <li class="btn btn-outline-primary m-1 active" data-filter="*">
                         All
                     </li>
-                    <li class="btn btn-outline-primary m-1" data-filter=".gedung">
+                    <li class="btn btn-outline-primary m-1" data-filter=".pergedungan">
                         Pergedungan
                     </li>
                     <li class="btn btn-outline-primary m-1" data-filter=".acara">

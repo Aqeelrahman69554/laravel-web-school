@@ -149,3 +149,7 @@ Route::prefix('admin')->name('admin.')->middleware('auth.custom')->group(functio
      // GALLERY
     Route::resource('gallery', AdminGalleryController::class);
 });
+
+Route::get('/admin/messages/count', function () {
+    return response()->json(\App\Models\Contact_2::where('is_read',0)->count());
+})->middleware('auth.custom');

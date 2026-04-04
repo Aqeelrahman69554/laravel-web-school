@@ -9,7 +9,12 @@ class Contact_2Controller extends Controller
 {
     public function index()
     {
+        // 🔥 tandai semua sebagai sudah dibaca
+        Contact_2::where('is_read', 0)
+            ->update(['is_read' => 1]);
+
         $messagess = Contact_2::all();
+
         return view('admin.pages.contact_2.index', compact('messagess'));
     }
 
